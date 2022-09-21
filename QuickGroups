@@ -2,6 +2,7 @@
 Michael De George 
 CSC415
 =end
+
 require 'csv'
 
 puts "Please enter the name of the input file (include .csv at the end): "
@@ -18,14 +19,12 @@ data = CSV.parse(File.read(input), headers: true)
 num_students = data.length
 
 #creating the struct to store objects under proper header
-Student = Struct.new(:first_name, :last_name, :email, :major1, :major2, :minor1, :minor2, :section)
+Student = Struct.new(:firstname, :lastname, :email, :major1, :major2, :minor1, :minor2, :section)
 
 #Method to print the columns neatly
-def studentInfo (student)
-    puts "Full Name:#{student.first_name} #{student.last_name}" 
-    puts "Email: #{student.email}"  
-    puts "Section: #{student.section}"
-    puts "Major(s): #{student.major1}"
+def studentInfo (student)do
+    print "Full Name: #{student.firstname} #{student.lastname} | Email: #{student.email} | Section: #{student.section}\n"
+    print "Major(s): #{student.major1}"
     if student.major2 != nil
         puts " and #{student.major2}"
     end
@@ -36,7 +35,7 @@ def studentInfo (student)
         puts " and #{student.minor2}"
     end
 end
-
+end
 #Fills CSV data into the Student struct
 table_array = [Student.new]
 i = 0
@@ -75,20 +74,31 @@ puts "[B] Number of Students per group"
     #Test to see if num_groups is correct
     puts num_groups
 
-   #Test to see if table_array is correct
-   d = 1
-   while d < num_students
-       puts studentInfo(table_array[d])
-       d+=1
-   end
+    #Test to see if table_array is correct
+    k = 1
+    while k < num_students
+        puts studentInfo(table_array[k])
+        k+=1
+    end
 
+    temp = table_array[0] #temp holds the empty header
+    shuffled_table_array = table_array.shuffle() #shuffles the array
 
+    while temp != shuffled_table_array[0] #makes sure nothing happens if the empty header is in the correct spot
+        temp_holder = shuffled_table_array[0] #assigns random name to a temp object
+        k = 1
+        while k < num_students + 1 #loops through entire array checking for empty file
+            if temp == shuffled_table_array[k] #Once it find the empty file, move previous value of position [0] to here
+                shuffled_table_array[k] = temp_holder
+                shuffled_table_array[0] = temp #puts the header in the proper spot
+            end
+            k+=1
+        end
+    end
 
-
-
-
-
-
- 
-
-
+    #here temp, printing check to see if shuffle works properly
+    k = 1
+    while k < num_students + 1
+        puts studentInfo(shuffled_table_array[k])
+        k+=1
+    end
