@@ -1,0 +1,11 @@
+first_name,last_name,email,major1,major2,minor1,minor2,section
+Leontyne Abbe labbemx@dion.ne.jpPsychology,,,9
+Beryle Abbotts babbotts4a@taobao.comWomen & Gender Studies,,,9
+Tobye Ablott tablottjt@live.comCriminologyComputer Science,,,3
+Bonnibelle Adams badamso1@usda.govPsychology,,,9
+Shurlock Agdahl sagdahl21@histats.comCriminologyComputer Science,,.3
+Karil Aisman kaisman9m@guardian.co.ukBiology Accounting,,,1
+Salim Aiston saistoni6@cpanel.netJournalismHistory,,,4
+Catina Aistrop caistropls@nbcnews.comAccountingStatistics Psychology,,,5
+Michael De George mikeiron@gmail.com Computer Engineering ,,, 2
+Kevin Long KLong@gmail.com Psychology ,,, 3
