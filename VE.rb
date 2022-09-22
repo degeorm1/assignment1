@@ -1,13 +1,16 @@
 =begin
 Michael De George
 csc415
-9/14/22
+9/22/22
 =end
 
 require_relative 'QuickGroups'
-require 'sort'
+require_relative 'sort'
 
-def do_view (view,args) 
+puts "View-A OR Edit-B"
+if "A"
+
+    def do_view (view,args) 
     case view 
     when "View"
         puts "\nView File\n\n".upcase!
@@ -15,4 +18,8 @@ def do_view (view,args)
             puts row.inspect
         end
     end
+end
+elsif "B"
+    array_for_the_info.push.gets.chomp
+    puts array_for_the_info
 end

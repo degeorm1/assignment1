@@ -1,7 +1,7 @@
 =begin
 Michael De George
 code For CSC415
-9/14/22
+9/22/22
 =end
 
 require "csv"
@@ -78,8 +78,10 @@ while m < num_students
     puts studInfo(array_for_the_info[m])
     m+=1
 end
-
-
+n=0
+out_file = File.new('Output.csv','w')
+    out_file << array_for_the_info
+out_file.close
 
 
 
