@@ -76,12 +76,10 @@ end
 m=0
 while 
     m < num_students do
-    puts studInfo(array_for_the_info[m]) 
+    studInfo(array_for_the_info[m]) 
     m+=1
 end
 
 
-
-
-
+puts "Sort by Major-(A) OR Sort Section-(B)"
 
