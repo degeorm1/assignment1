@@ -1,9 +1,11 @@
 =begin
 Michael De George
 code For CSC415
+9/14/22
 =end
 
 require "csv"
+require_relative'sort.rb'
 
 puts"Enter the input file"
 input = gets.chomp
@@ -29,7 +31,7 @@ def studInfo (student)
             puts " #{student.major2}"
             end
         if student.minor1 != nil
-        puts "Minor(s): #{student.minor1}"
+        puts "Minor or Minors: #{student.minor1}"
         end
             if student.minor2 != nil
         puts " and #{student.minor2}"
@@ -66,20 +68,18 @@ while valid_input == false
             num_groups = num_students / num_stud_group
             valid_input = true
         else
-            puts "Invalid input. Please enter 'A' or 'B'"
-            instructor_response = gets.chomp
-            instructor_response.upcase!
-            valid_input = false
+            puts "Failure Invalid Input"
+           
         end
 end
-
-m=0
-while 
-    m < num_students do
-    studInfo(array_for_the_info[m]) 
+ 
+m = 1
+while m < num_students
+    puts studInfo(array_for_the_info[m])
     m+=1
 end
 
 
-puts "Sort by Major-(A) OR Sort Section-(B)"
+
+
 
