@@ -7,10 +7,10 @@ puts "Please enter file name of the student csv you want to use"
 file_name = gets.chomp
 
 #makes sure the file exists 
-while !(File.file?(@infile))
+while !(File.file?(file_name))
     print "Invalid file name: this files does not exist in the directory\nPlease try again.\n"
     print "\nPlease enter in the name of the input file (csv): "
-    @infile = gets.chomp
+    file_name = gets.chomp
 end
 
 puts "How would you like to sort the students (A)- by number of groups or (B)- by number of students per group."
