@@ -1,19 +1,3 @@
-Michael De George
-
-Assignment 1 readme File
-
-VM INFO
-VM Name: student1
-Password: Brother123!
-
-Full File path name: /home/student1/vm-csc415/assignment1
-cd assignment1
-
-URL from Github
-https://github.com/degeorm1/assignment1/tree/revision/Assignment1Resubmit
-Assumptions: 
-Assumptions I have made during this coding process is that I had a much better understanding going into the project of what was expected and what was needed to be delivered. I have prepared and created a plan to tackle the assignment and finish it within a reasonable time frame. I believe that I truly created a good program that satisfies a lot of the requirements. 
-
 Instructions for running code 
 1.Enter the input file
 2. If input file is not csv/ correct student input file that exists in the folder it will tell it input correct file
