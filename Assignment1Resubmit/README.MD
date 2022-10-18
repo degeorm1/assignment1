@@ -8,4 +8,5 @@ Instructions for running code
 7. file is created in a csv output and into the terminal 
 Known Bugs and Limitations 
 1.	If the sorting/ grouping the students exceeds certain amount when entering the groups and overflows I had the program increment and add them to the next group up by 1,2,3…so on 
+2. Sometimes when entering add, remove or delete students it enters a loop and I am not sure how to escape it, asks same prompt to restart sort, already executed and did fucntions
 
