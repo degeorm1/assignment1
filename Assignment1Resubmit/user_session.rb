@@ -74,7 +74,7 @@ class UserSession
   end
 
   def group_students
-    puts "How would you like to sort the students (A) by number of groups or (B) by number of students per group."
+    puts "How would you like to sort the students (A) by number of groups or (B) by number of Astudents per group."
 
     instructor_response = gets.chomp
     instructor_response.upcase!
